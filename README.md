@@ -20,7 +20,7 @@
 ## 1.fork本项目
 ### 必须检查的仓库设置
 
-1. Settings -> Actions -> General -> Workflow permissions：选择 "Read and write permissions"（以允许 GITHUB_TOKEN push）。
+1. 确保 `Settings -> Actions -> General` 中 Actions 处于启用状态。`tieba.yml` 中的 `workflow-keepalive` job 已配置 `actions: write` 权限，无需授予仓库 `Read and write permissions`。
 
 2. 确保仓库没有被 Archived（Settings -> General -> Danger Zone: Archive repository）。
 
@@ -61,7 +61,7 @@ BDUSS | xxxxxxxxxxx
 
 ## 成功了
 
-每天早上`6:30`将会自动进行签到
+每天早上`6:30`将会自动进行签到。`tieba.yml` 中的 `workflow-keepalive` job 会自动保持该定时工作流处于启用状态。
 
 
 Name | Value
